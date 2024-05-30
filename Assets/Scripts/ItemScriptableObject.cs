@@ -8,6 +8,7 @@ public class ItemScriptableObject : ScriptableObject
 {
     public new string name; 
     public Sprite itemSprite;
+    public bool isEnhanced;
 
     public float defense;
     public float attack;
@@ -22,5 +23,6 @@ public class ItemScriptableObject : ScriptableObject
     public float perceivedValue;
     public float purchasePriority;
 
-    public int itemSize;
+    public int itemSizeX;
+    public int itemSizeY;
 }
