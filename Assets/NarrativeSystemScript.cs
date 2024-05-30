@@ -14,14 +14,14 @@ public class NarrativeSystemScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {//on start, start dialogue
         textComponent.text = string.Empty;
         StartDialogue();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {//on mouse click advance dialogue
         if(Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index]) 
