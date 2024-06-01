@@ -1969,6 +1969,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4604862207233600420, guid: 9783c2f4c9b2603488db9243a1744968, type: 3}
+      propertyPath: m_text
+      value: Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604862207233600420, guid: 9783c2f4c9b2603488db9243a1744968, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604862207233600420, guid: 9783c2f4c9b2603488db9243a1744968, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6129043284581265513, guid: 9783c2f4c9b2603488db9243a1744968, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1999,7 +2011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134801636078203721, guid: 9783c2f4c9b2603488db9243a1744968, type: 3}
       propertyPath: m_Name
-      value: 1x1 Button
+      value: Potion Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
