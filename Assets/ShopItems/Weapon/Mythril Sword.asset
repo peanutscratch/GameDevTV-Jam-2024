@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Bone Saw (Cracked)
+  m_Name: Mythril Sword
   m_EditorClassIdentifier: 
-  name: Bone Saw (Cracked)
-  itemSprite: {fileID: 0}
+  name: Mythril Sword
+  itemSprite: {fileID: 21300000, guid: 2942be0e3ba4e494cb8cb6e93fc391cd, type: 3}
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
   defense: 0
-  attack: 0
-  magic: 0
-  cost: 5
-  basePrice: 10
+  attack: 35
+  magic: 5
+  cost: 22
+  basePrice: 33
   category: 1
-  perceivedValue: 0
+  perceivedValue: 40
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 2
+  itemSizeY: 1
+  flavorText: Forged with an ancient and powerful metal that makes the pointy part
+    even pointier.

@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Iron Helmet
+  m_Name: Rake
   m_EditorClassIdentifier: 
-  name: Iron Helmet
+  name: Rake
   itemSprite: {fileID: 0}
-  defense: 10
-  attack: 0
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
+  defense: 0
+  attack: 5
   magic: 0
-  cost: 12.5
-  basePrice: 17.5
-  category: 3
-  perceivedValue: 0
+  cost: 2
+  basePrice: 3
+  category: 1
+  perceivedValue: 5
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 2
+  itemSizeY: 1
+  flavorText: 

@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Wooden Shield
+  m_Name: Fire Resisting Potion
   m_EditorClassIdentifier: 
-  name: Wooden Shield
-  itemSprite: {fileID: 0}
-  defense: 5
+  name: Fire Resisting Potion
+  itemSprite: {fileID: 21300000, guid: 360a26e485163ab4091a43f74c171d00, type: 3}
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
+  defense: 15
   attack: 0
-  magic: 0
-  cost: 5
-  basePrice: 10
-  category: 0
-  perceivedValue: 0
+  magic: 10
+  cost: 12
+  basePrice: 18
+  category: 2
+  perceivedValue: 25
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 1
+  itemSizeY: 1
+  flavorText: The packaging includes a long legal explanation that "resistant" is
+    not "immune."

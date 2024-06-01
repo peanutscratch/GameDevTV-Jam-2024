@@ -29,4 +29,8 @@ public class ItemScriptableObject : ScriptableObject
     public int itemSizeY;
 
     public string flavorText;
+
+    public override string ToString() {
+        return "Item Name: " + this.name + ",  Attack is: " + this.attack + ", Defense is: " + this.defense + ", Magic is: " + this.magic + ", Selling Price is: " + this.basePrice;
+    }
 }

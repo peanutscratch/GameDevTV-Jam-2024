@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Leather Belt
+  m_Name: Steel Chestpiece
   m_EditorClassIdentifier: 
-  name: Leather Belt
-  itemSprite: {fileID: 0}
-  defense: 5
+  name: Steel Chestpiece
+  itemSprite: {fileID: 21300000, guid: 3952c5d1458726241b78eae830e81498, type: 3}
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
+  defense: 50
   attack: 0
   magic: 0
-  cost: 7.5
-  basePrice: 12.5
+  cost: 24
+  basePrice: 36
   category: 3
-  perceivedValue: 0
+  perceivedValue: 50
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 3
+  itemSizeY: 2
+  flavorText: Sturdy, essential protection for difficult working environments.
