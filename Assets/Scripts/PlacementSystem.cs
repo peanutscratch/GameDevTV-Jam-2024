@@ -34,6 +34,7 @@ public class PlacementSystem : MonoBehaviour
 
 
     private List<GameObject> placedGameObjects = new();
+    private List<ObjectData> placedGameObjectsMetadata = new();
 
     [SerializeField]
     private PreviewSystem preview;
@@ -83,6 +84,7 @@ public class PlacementSystem : MonoBehaviour
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].Prefab);
         newObject.transform.position = grid.CellToWorld(gridPos);
         placedGameObjects.Add(newObject);
+        placedGameObjectsMetadata.Add(database.objectsData[selectedObjectIndex]);
         GridData selectedData = database.objectsData[selectedObjectIndex].isPromotion == true ? saleData : equipmentData;
         selectedData.AddObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, placedGameObjects.Count-1);
 
@@ -126,7 +128,7 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
-    public List<GameObject> getPlacedObjects() {
-        return this.placedGameObjects;
+    public List<ObjectData> getPlacedObjects() {
+        return this.placedGameObjectsMetadata;
     }
 }

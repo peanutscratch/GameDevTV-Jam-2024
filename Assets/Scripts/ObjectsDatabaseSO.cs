@@ -31,5 +31,5 @@ public class ObjectData
     public GameObject Prefab {get; private set;}
 
     [field: SerializeField]
-    public ItemScriptableObject itemInformation {get; private set;}
+    public ItemScriptableObject ItemInformation {get; private set;}
 }

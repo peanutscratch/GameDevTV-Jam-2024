@@ -18,18 +18,22 @@ MonoBehaviour:
     <isPromotion>k__BackingField: 0
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 5264494812785425067, guid: 4cb0008cfcf9c994a88d4dfa4f250d84, type: 3}
+    <ItemInformation>k__BackingField: {fileID: 11400000, guid: 29c2facc6ba907449acde95a3a2eafdc, type: 2}
   - <Name>k__BackingField: 2x1
     <ID>k__BackingField: 1
     <isPromotion>k__BackingField: 0
     <Size>k__BackingField: {x: 2, y: 1}
     <Prefab>k__BackingField: {fileID: 4355457449577456159, guid: 5da1f0fb644b3224c8a267afb9e7e7fa, type: 3}
+    <ItemInformation>k__BackingField: {fileID: 11400000, guid: 117ba2163f3bbca40a4cb0e7d1f38c40, type: 2}
   - <Name>k__BackingField: 1x2
     <ID>k__BackingField: 2
     <isPromotion>k__BackingField: 0
     <Size>k__BackingField: {x: 1, y: 2}
     <Prefab>k__BackingField: {fileID: 2394079986258068128, guid: fca21a9433710fc41a96d0776e5be40f, type: 3}
+    <ItemInformation>k__BackingField: {fileID: 11400000, guid: 46e10edbbaa53764d963c5d2e2dc3075, type: 2}
   - <Name>k__BackingField: Promo
     <ID>k__BackingField: 3
     <isPromotion>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 5264494812785425067, guid: 11751253d6aa7f749b74145173106330, type: 3}
+    <ItemInformation>k__BackingField: {fileID: 0}
