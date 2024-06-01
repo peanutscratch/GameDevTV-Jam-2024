@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,6 +290,451 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &779806391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2040325009}
+    m_Modifications:
+    - target: {fileID: 156797619850319442, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 156797619850319442, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 877187652350022272, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 877187652350022272, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679922404514849902, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23314345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679922404514849902, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23314345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679922404514849902, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5566038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.size
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: It was an age of darkness, an age of heroism...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: A great Beast then dwelt within the Caverns of Woe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: Each day the Beast spread fire and death across the countryside.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: I prayed that an adventurer would come. To challenge the Beast, to restore
+        hope...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: ...to bring their disposable income to my shop!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Located conveniently just before the boss fight. Last chance to get
+        those gear upgrades!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: You're welcome.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: Okay, so I only today found a safe place to set up shop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: And there was a rust monster. And I was broke to begin with.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: For now the inventory situation is looking a little more "lemonade stand"
+        than "best in slot."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[10]
+      value: But adventurers are loaded, right? Maybe we'll get a sucker.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[11]
+      value: Drag items from my stock and place them on the display table, to make
+        them available to customers for purchase.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[12]
+      value: Press the ready for business button when we're ready to sell.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[13]
+      value: Ah, I hear my first customer approaching!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[14]
+      value: Oh cool, there's a shop on this floor!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[15]
+      value: Welcome, traveler! I'd be happy to help you pick out some fine-
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[16]
+      value: Uh, shouldn't you have more stuff?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[17]
+      value: I was hoping the items here would be way cooler.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[18]
+      value: Is this like, a dollar store?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[19]
+      value: Well. I always love to get feedback from idio-I mean, appreciated clients.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[20]
+      value: (My stock and how I display it affect how much a customer is willing
+        to spend, according to their preferences.)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[21]
+      value: This is all I need. Time to vanquish evil!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[22]
+      value: Good luck out there? I guess?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[23]
+      value: Wait, if that twerp actually defeats the Beast right now, I traveled
+        out here and set up my shop for nothing.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[24]
+      value: Go trip on a flagstone and break your neck, cheapskate!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[25]
+      value: '[Monster roar]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[26]
+      value: That fight sounded short. And brutal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[27]
+      value: I should check it out after the Beast wanders off, and see if I'm still
+        in business.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[28]
+      value: And also see if anything that jerk was carrying survived. Maybe I can
+        "restock" for cheap.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[29]
+      value: Looks like the Beast won this one. What a mess, there's nothing left
+        I can use!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[30]
+      value: I can examine the scene to learn a little about how he died. Maybe I
+        can better prepare the next guy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[31]
+      value: With some upselling, of course.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[32]
+      value: '[Detective scene information]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[33]
+      value: Ugh...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[34]
+      value: Suddenly I don't feel well...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[35]
+      value: Maybe poking around in monster blood with my bare hands wasn't the best
+        move.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[36]
+      value: If I made barely any money AND poisoned myself today, I'm going to be
+        furious.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[37]
+      value: I'll try to sleep it off... Maybe the trader coming to restock me tomorrow
+        has some medicine.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[38]
+      value: No, I've never heard of the blood of the Beast poisoning anyone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[39]
+      value: That's a relief.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[40]
+      value: The legends all clearly say the blood of the Beast horribly CURSES people,
+        instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[41]
+      value: The foul blood chains their souls into an eternally repeating torment,
+        which they can never wake from while the Beast lives.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[42]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[43]
+      value: I feel less relieved now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[44]
+      value: Well, talking business always makes ME feel better!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[45]
+      value: You don't have much stock left. You can buy anything from my catalog
+        that you want to sell! Don't worry, I only charge wholesale prices.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[46]
+      value: And every order comes with a free healing potion. You look like you
+        need it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[47]
+      value: Splendid! I'll be back every morning. Good luck on your first day!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[48]
+      value: Uh, you mean my second day?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[49]
+      value: Poor old guy's losing his memory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[50]
+      value: But I'm not going to lose any sales, I hear a customer! Welcome, traveler!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[51]
+      value: Oh cool, there's a shop on this floor!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[52]
+      value: WHAT THE HELL
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[53]
+      value: Do you have an identical twin brother in the same line of work? I might
+        have some bad news for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[54]
+      value: Um, no?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[55]
+      value: This poor old guy must be losing his memory...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[56]
+      value: You're supposed to say that when I can't hear you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[57]
+      value: '[Display reaction lines]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[58]
+      value: The trader said, "eternally repeating torment"... "while the Beast lives."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[59]
+      value: Am I repeating the same day? Eternally? Until...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[60]
+      value: '[Monster roar]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[61]
+      value: Until this idiot defeats the Beast!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[62]
+      value: '[Detective scene information]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[63]
+      value: I'll have to stock equipment good enough to defeat the monster, AND
+        convince the little dingus to buy it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[64]
+      value: How hard could that be?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[65]
+      value: '[Triumphant hero shout]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[66]
+      value: He's done it! I'm free!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[67]
+      value: I'm free AND I made a tidy profit!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[68]
+      value: You're welcome?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[69]
+      value: '[Victory screen]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[70]
+      value: Clicking on screen advanced the dialogue!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[71]
+      value: Clicking on screen advanced the dialogue!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: lines.Array.data[72]
+      value: Clicking on screen advanced the dialogue!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501405237419889665, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+--- !u!224 &779806392 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4602857498787129964, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+  m_PrefabInstance: {fileID: 779806391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1046053168
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +1127,7 @@ RectTransform:
   m_Children:
   - {fileID: 29222345}
   - {fileID: 1046053169}
+  - {fileID: 779806392}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

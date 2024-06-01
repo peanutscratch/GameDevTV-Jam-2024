@@ -6,6 +6,7 @@ using TMPro;
 public class NarrativeSystemScript : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public string[] character;
     public string[] lines;
     public float textSpeed;
 
