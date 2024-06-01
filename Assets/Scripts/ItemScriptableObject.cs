@@ -8,7 +8,9 @@ public class ItemScriptableObject : ScriptableObject
 {
     public new string name; 
     public Sprite itemSprite;
-    public bool isEnhanced;
+    public bool isEnchanted;
+    public bool isDiscounted;
+    public bool isPremium;
 
     public float defense;
     public float attack;
@@ -25,4 +27,6 @@ public class ItemScriptableObject : ScriptableObject
 
     public int itemSizeX;
     public int itemSizeY;
+
+    public string flavorText;
 }
