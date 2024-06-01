@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Shield
+  m_Name: Wyrmscale Shield
   m_EditorClassIdentifier: 
-  name: Shield
+  name: Wyrmscale Shield
   itemSprite: {fileID: 0}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
-  defense: 20
-  attack: 0
-  magic: 0
-  cost: 10
-  basePrice: 15
+  defense: 25
+  attack: 5
+  magic: 15
+  cost: 22.5
+  basePrice: 33.75
   category: 0
-  perceivedValue: 20
+  perceivedValue: 45
   purchasePriority: 0
   itemSizeX: 2
   itemSizeY: 2
-  flavorText: Almost as good as not being hit in the first place.
+  flavorText: Don't worry, it will protect you much better than the creature it was
+    made from.

@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Shield
+  m_Name: Dwarfstone Gauntlets
   m_EditorClassIdentifier: 
-  name: Shield
-  itemSprite: {fileID: 0}
+  name: Dwarfstone Gauntlets
+  itemSprite: {fileID: 21300000, guid: bd535482323d7c249be01821170795fd, type: 3}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
-  defense: 20
-  attack: 0
-  magic: 0
-  cost: 10
-  basePrice: 15
-  category: 0
-  perceivedValue: 20
+  defense: 30
+  attack: 15
+  magic: 5
+  cost: 24
+  basePrice: 36
+  category: 3
+  perceivedValue: 50
   purchasePriority: 0
-  itemSizeX: 2
-  itemSizeY: 2
-  flavorText: Almost as good as not being hit in the first place.
+  itemSizeX: 1
+  itemSizeY: 1
+  flavorText: Dwarves say they're the best ever made, and you wouldn't want to start
+    an argument with someone wearing them.

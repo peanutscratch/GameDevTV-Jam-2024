@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Shield
+  m_Name: Book of Curses
   m_EditorClassIdentifier: 
-  name: Shield
+  name: Book of Curses
   itemSprite: {fileID: 0}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
-  defense: 20
-  attack: 0
-  magic: 0
-  cost: 10
-  basePrice: 15
-  category: 0
-  perceivedValue: 20
+  defense: 0
+  attack: 15
+  magic: 20
+  cost: 20
+  basePrice: 30
+  category: 4
+  perceivedValue: 35
   purchasePriority: 0
   itemSizeX: 2
   itemSizeY: 2
-  flavorText: Almost as good as not being hit in the first place.
+  flavorText: Don't use this around your mother or she'll wash your mouth out with
+    soap.

@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Shield
+  m_Name: Spiked Shield
   m_EditorClassIdentifier: 
-  name: Shield
+  name: Spiked Shield
   itemSprite: {fileID: 0}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
   defense: 20
-  attack: 0
+  attack: 30
   magic: 0
-  cost: 10
-  basePrice: 15
+  cost: 25
+  basePrice: 37.5
   category: 0
-  perceivedValue: 20
+  perceivedValue: 50
   purchasePriority: 0
   itemSizeX: 2
   itemSizeY: 2
-  flavorText: Almost as good as not being hit in the first place.
+  flavorText: You don't need to block as much if you punch a faceful of spikes into
+    your enemies.

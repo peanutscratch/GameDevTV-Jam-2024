@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Shield
+  m_Name: Mythril Shield
   m_EditorClassIdentifier: 
-  name: Shield
+  name: Mythril Shield
   itemSprite: {fileID: 0}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
-  defense: 20
-  attack: 0
-  magic: 0
-  cost: 10
-  basePrice: 15
+  defense: 30
+  attack: 5
+  magic: 5
+  cost: 20
+  basePrice: 30
   category: 0
-  perceivedValue: 20
+  perceivedValue: 40
   purchasePriority: 0
   itemSizeX: 2
   itemSizeY: 2
-  flavorText: Almost as good as not being hit in the first place.
+  flavorText: It rings out with a beautiful note whenever it halts one of your enemy's
+    blows.
