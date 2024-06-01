@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
             lastPos = hit.point;
         }
 
-        Debug.Log("lastPos: " + lastPos);
+        //Debug.Log("lastPos: " + lastPos);
 
         return lastPos;
     }
