@@ -30,7 +30,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     private AudioClip wrongPlacementClip;
 
-    private GridData saleData, equipmentData;
+    public GridData saleData, equipmentData;
 
 
     private List<GameObject> placedGameObjects = new();
