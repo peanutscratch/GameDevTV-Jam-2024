@@ -8,6 +8,7 @@ public class HeroBehavior : MonoBehaviour
 {   
     [SerializeField]
     private static int totalGridArea = 50;
+    [SerializeField]
     public PlacementSystem placementSystem;
 
     [SerializeField]
