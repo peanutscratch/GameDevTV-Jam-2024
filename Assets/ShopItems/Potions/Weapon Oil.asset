@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Health Potion
+  m_Name: Weapon Oil
   m_EditorClassIdentifier: 
-  name: Health Potion
-  itemSprite: {fileID: 0}
-  defense: 0
-  attack: 0
-  magic: 0
-  cost: 7.5
-  basePrice: 10
+  name: Weapon Oil
+  itemSprite: {fileID: 21300000, guid: fb53f6cd28ba20f489e6423ef8891f47, type: 3}
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
+  defense: 5
+  attack: 20
+  magic: 5
+  cost: 14
+  basePrice: 21
   category: 2
-  perceivedValue: 0
+  perceivedValue: 30
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 1
+  itemSizeY: 1
+  flavorText: Keep your weapons in top-top shape against rust. Engine performance
+    not rated.

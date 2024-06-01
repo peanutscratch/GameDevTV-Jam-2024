@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1fafe253fc2e1b4f82075d23cfa94e4, type: 3}
-  m_Name: Rake
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  name: Rake
-  itemSprite: {fileID: 0}
+  name: Sword
+  itemSprite: {fileID: 21300000, guid: 63eaa312e35ebcb4bbc8ee559cd87927, type: 3}
+  isEnchanted: 0
+  isDiscounted: 0
+  isPremium: 0
   defense: 0
-  attack: 0
+  attack: 10
   magic: 0
-  cost: 10
-  basePrice: 15
+  cost: 6
+  basePrice: 9
   category: 1
-  perceivedValue: 0
+  perceivedValue: 10
   purchasePriority: 0
-  itemSize: 0
+  itemSizeX: 2
+  itemSizeY: 1
+  flavorText: Keep pointy end away from user.
