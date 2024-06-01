@@ -124,4 +124,8 @@ public class PlacementSystem : MonoBehaviour
             lastDetectedPosition = gridPos;
         }
     }
+
+    public List<GameObject> getPlacedObjects() {
+        return this.placedGameObjects;
+    }
 }
