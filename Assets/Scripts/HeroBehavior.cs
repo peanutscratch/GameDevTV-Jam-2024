@@ -5,19 +5,30 @@ using UnityEngine;
 
 // TODO: Pipe the debug lines from here into the dialogue system
 public class HeroBehavior : MonoBehaviour
-{
+{   
+    [SerializeField]
     private static int totalGridArea = 50;
     public PlacementSystem placementSystem;
+
+    [SerializeField]
     public float willingToPay = 100.0F;
 
+    [SerializeField]
     private int LookingForPotion = 10;
+    [SerializeField]
     private int LookingForWeapon = 6;
+    [SerializeField]
     private int LookingForShield = 6;
+    [SerializeField]
     private int LookingForMagic = 4;
+    [SerializeField]
     private int LookingForArmor = 3;
 
+    [SerializeField]
     private float discountFactor = 1.5F;
+    [SerializeField]
     private float premiumFactor = 1.5F;
+    [SerializeField]
     private float enchantedFactor = 2.0F;
 
     public void OnClick() {
