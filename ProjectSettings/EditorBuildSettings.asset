@@ -11,4 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dragon Fight Outcome.unity
     guid: 92aa95c49d019b940bf80beae32d3beb
+    path: Assets/Scenes/Menu.unity
+    guid: 4041ce07de446d94c8d4ecb9c22cb145
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 76e4ae1fbdc13af4bb4f835fc64753af
   m_configObjects: {}
