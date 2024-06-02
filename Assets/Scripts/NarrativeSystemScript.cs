@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class NarrativeSystemScript : MonoBehaviour
@@ -60,9 +61,13 @@ public class NarrativeSystemScript : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine (TypeLine());
         }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+       else {
+            if (lines.Length > 0) {
+                SceneManager.LoadScene("Dragon Fight Outcome");
+            }
+       }
+        //{
+         //   gameObject.SetActive(false);
+       // }
     }
 }
