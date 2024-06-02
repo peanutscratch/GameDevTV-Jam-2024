@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   name: Shield
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 99ab3ea65d6f87c4e90f79747bbad823, type: 3}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0

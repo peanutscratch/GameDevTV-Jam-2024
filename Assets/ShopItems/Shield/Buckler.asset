@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Buckler
   m_EditorClassIdentifier: 
   name: Buckler
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 96f706dfe95061c41a1f54a06a33bc31, type: 3}
   isEnchanted: 0
   isDiscounted: 0
   isPremium: 0
