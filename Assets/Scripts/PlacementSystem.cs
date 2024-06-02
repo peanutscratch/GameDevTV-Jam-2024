@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class PlacementSystem : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject mouseIndicator; //3D mouse pointer
 
     [SerializeField]
     private InputManager inputManager;
@@ -17,18 +15,9 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField]
     private ObjectsDatabaseSO database;
-    private int selectedObjectIndex = -1;
 
     [SerializeField]
     private GameObject gridVisualization;
-
-    [SerializeField]
-    private AudioSource source;
-    [SerializeField]
-    private AudioClip correctPlacementClip;
-    
-    [SerializeField]
-    private AudioClip wrongPlacementClip;
 
     public GridData saleData, equipmentData;
 
@@ -40,9 +29,18 @@ public class PlacementSystem : MonoBehaviour
     private PreviewSystem preview;
 
     private Vector3Int lastDetectedPosition = Vector3Int.zero;
+
+    [SerializeField]
+    private ObjectPlacer objectPlacer;
+
+    IObjectState objectState;
+
+    [SerializeField]
+    private SoundManager soundManager;
+
     private void Start()
     {
-        StopPlacement();
+        gridVisualization.SetActive(false);
         saleData = new();
         equipmentData = new();
 
@@ -51,17 +49,20 @@ public class PlacementSystem : MonoBehaviour
     public void StartPlacement(int ID)
     {
         StopPlacement();
-        selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
-        if(selectedObjectIndex < 0)
-        {
-            UnityEngine.Debug.LogError($"No ID found {ID}");
-            return;
-        }
         gridVisualization.SetActive(true);
-        preview.StartShowingPlacementPreview(database.objectsData[selectedObjectIndex].Prefab, database.objectsData[selectedObjectIndex].Size);
+        objectState = new PlacementState(ID, grid, preview, database, saleData, equipmentData,objectPlacer, soundManager);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
 
+    }
+
+    public void StartRemoving()
+    {
+        StopPlacement();
+        gridVisualization.SetActive(true);
+        objectState = new RemovingState(grid, preview, saleData, equipmentData, objectPlacer, soundManager);
+        inputManager.OnClicked += PlaceStructure;
+        inputManager.OnExit += StopPlacement;
     }
 
     private void PlaceStructure()
@@ -73,45 +74,36 @@ public class PlacementSystem : MonoBehaviour
         Vector3 mousePos = inputManager.GetSelectedMapPos();
         Vector3Int gridPos = grid.WorldToCell(mousePos);
 
-        bool placementValidity = CheckPlacementValidity(gridPos, selectedObjectIndex);
-        if(placementValidity == false)
-        {
-            source.PlayOneShot(wrongPlacementClip);
-            return;
-        }
-
-        source.PlayOneShot(correctPlacementClip);
-        GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].Prefab);
-        newObject.transform.position = grid.CellToWorld(gridPos);
-        placedGameObjects.Add(newObject);
-        placedGameObjectsMetadata.Add(database.objectsData[selectedObjectIndex]);
-        GridData selectedData = database.objectsData[selectedObjectIndex].isPromotion == true ? saleData : equipmentData;
-        selectedData.AddObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, placedGameObjects.Count-1);
-
-        preview.UpdatePosition(grid.CellToWorld(gridPos), false);
+        objectState.OnAction(gridPos);
 
     }
 
-    private bool CheckPlacementValidity(Vector3Int gridPos, int selectedObjectIndex)
-    {
-        GridData selectedData = database.objectsData[selectedObjectIndex].isPromotion == true ? saleData : equipmentData;
+    // private bool CheckPlacementValidity(Vector3Int gridPos, int selectedObjectIndex)
+    // {
+    //     GridData selectedData = database.objectsData[selectedObjectIndex].isPromotion == true ? saleData : equipmentData;
 
-        return selectedData.CanPlaceObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size);
-    }
+    //     return selectedData.CanPlaceObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size);
+    // }
 
     private void StopPlacement()
     {
-        selectedObjectIndex = -1;
+        soundManager.PlaySound(SoundType.Click);
+
+        if(objectState == null)
+        {
+            return;
+        }
         gridVisualization.SetActive(false);
-        preview.StopShowingPreview();
+        objectState.EndState();
         inputManager.OnClicked -= PlaceStructure;
         inputManager.OnExit -= StopPlacement;
         lastDetectedPosition = Vector3Int.zero;
+        objectState = null;
     }
 
     private void Update()
     {
-        if(selectedObjectIndex < 0)
+        if(objectState == null)
         {
             return;
         }
@@ -120,10 +112,7 @@ public class PlacementSystem : MonoBehaviour
 
         if(lastDetectedPosition != gridPos)
         {
-            bool placementValidity = CheckPlacementValidity(gridPos, selectedObjectIndex);
-
-            mouseIndicator.transform.position = mousePos;
-            preview.UpdatePosition(grid.CellToWorld(gridPos), placementValidity);
+            objectState.UpdateState(gridPos);
             lastDetectedPosition = gridPos;
         }
     }
