@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
-// TODO: Pipe the debug lines from here into the dialogue system
 public class HeroBehavior : MonoBehaviour
 {   
+    [SerializeField]
+    public GameStateInfoSO gameState;
     [SerializeField]
     public GameObject dialogueBox;
     [SerializeField]
@@ -40,8 +40,6 @@ public class HeroBehavior : MonoBehaviour
 
     public void OnClick() {
 
-        dialogueBox.SetActive(true);
-
         placementSystem = FindObjectOfType<PlacementSystem>();
         List<ObjectData> itemsForSale = placementSystem.getPlacedObjects();
         List<string> linesofDialogue = new();
@@ -74,6 +72,7 @@ public class HeroBehavior : MonoBehaviour
             linesofDialogue.Add("I would like to buy this " + itemToBuy.ItemInformation.name + " please!");
             Debug.Log("I would like to buy this " + itemToBuy.ItemInformation.name + " please!");
             willingToPay -= itemToBuy.ItemInformation.basePrice;
+            gameState.SellItem(itemToBuy.ItemInformation.basePrice);
 
             reduceBuyingFactor(itemToBuy.ItemInformation.category.ToString());
             // Add logic to remove from grid as well
@@ -89,6 +88,7 @@ public class HeroBehavior : MonoBehaviour
         linesofDialogue.Add("I think I'm done shopping for now, thanks!");
         Debug.Log("I think I'm done shopping for now, thanks!");
 
+        dialogueBox.SetActive(true);
         dialogueBox.GetComponent<NarrativeSystemScript>().lines = linesofDialogue.ToArray();
     }
 

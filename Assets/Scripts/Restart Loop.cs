@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class RestartLoop : MonoBehaviour
 {
+    [SerializeField]
+    private GameStateInfoSO gameState;
+
     // Start is called before the first frame update
     public void OnClick()
     {
+        gameState.currentLoopCount += 1;
         SceneManager.LoadScene("InventoryGridPlacement");
     }
 }

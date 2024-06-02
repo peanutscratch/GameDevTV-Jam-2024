@@ -62,7 +62,8 @@ public class NarrativeSystemScript : MonoBehaviour
             StartCoroutine (TypeLine());
         }
        else {
-            if (lines.Length > 0) {
+            // Swap to endgame
+            if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("InventoryGridPlacement")) {
                 SceneManager.LoadScene("Dragon Fight Outcome");
             }
        }

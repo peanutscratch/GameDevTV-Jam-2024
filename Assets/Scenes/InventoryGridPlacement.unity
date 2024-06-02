@@ -1822,6 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c609659b6693aea4abaae3ad837b62f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
   dialogueBox: {fileID: 1167243798}
   placementSystem: {fileID: 0}
   willingToPay: 100
