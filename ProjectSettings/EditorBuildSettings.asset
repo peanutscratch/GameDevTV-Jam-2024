@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/InventoryGridPlacement.unity
+    guid: 64b3b65967aaf104483338d42e60d742
+  - enabled: 1
+    path: Assets/Scenes/Dragon Fight Outcome.unity
+    guid: 92aa95c49d019b940bf80beae32d3beb
   m_configObjects: {}

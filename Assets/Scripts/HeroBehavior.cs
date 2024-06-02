@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 // TODO: Pipe the debug lines from here into the dialogue system
@@ -31,6 +32,9 @@ public class HeroBehavior : MonoBehaviour
     private float premiumFactor = 1.5F;
     [SerializeField]
     private float enchantedFactor = 2.0F;
+
+    [SerializeField]
+    private static List<ObjectData> purchasedItems = new();
 
     public void OnClick() {
         placementSystem = FindObjectOfType<PlacementSystem>();
@@ -63,6 +67,7 @@ public class HeroBehavior : MonoBehaviour
             reduceBuyingFactor(itemToBuy.ItemInformation.category.ToString());
             // Add logic to remove from grid as well
             itemsForSale.Remove(itemToBuy);
+            purchasedItems.Add(itemToBuy);
         }
 
         if (willingToPay <= 0.0F) {
@@ -70,6 +75,8 @@ public class HeroBehavior : MonoBehaviour
         }
 
         Debug.Log("I think I'm done shopping for now, thanks!");
+
+        SceneManager.LoadScene("Dragon Fight Outcome");
     }
 
     private ObjectData computePurchasePriorityAndSelectItem(List<ObjectData> itemsForSale) {
@@ -163,5 +170,13 @@ public class HeroBehavior : MonoBehaviour
         } else if (itemCategory.Equals("Magic")) {
             LookingForMagic -= 3;
         }
+    }
+
+    public static List<ObjectData> getPurchasedItemsList() {
+        return purchasedItems;
+    }
+
+    public static void clearPurchasedItemsList() {
+        purchasedItems.Clear();
     }
 }
