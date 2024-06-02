@@ -19,14 +19,6 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     private GameObject gridVisualization;
 
-    [SerializeField]
-    private AudioSource source;
-    [SerializeField]
-    private AudioClip correctPlacementClip;
-    
-    [SerializeField]
-    private AudioClip wrongPlacementClip;
-
     public GridData saleData, equipmentData;
 
     [SerializeField]
@@ -38,6 +30,9 @@ public class PlacementSystem : MonoBehaviour
     private ObjectPlacer objectPlacer;
 
     IObjectState objectState;
+
+    [SerializeField]
+    private SoundManager soundManager;
 
     private void Start()
     {
@@ -51,7 +46,7 @@ public class PlacementSystem : MonoBehaviour
     {
         StopPlacement();
         gridVisualization.SetActive(true);
-        objectState = new PlacementState(ID, grid, preview, database, saleData, equipmentData,objectPlacer);
+        objectState = new PlacementState(ID, grid, preview, database, saleData, equipmentData,objectPlacer, soundManager);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
 
@@ -61,7 +56,7 @@ public class PlacementSystem : MonoBehaviour
     {
         StopPlacement();
         gridVisualization.SetActive(true);
-        objectState = new RemovingState(grid, preview, saleData, equipmentData, objectPlacer);
+        objectState = new RemovingState(grid, preview, saleData, equipmentData, objectPlacer, soundManager);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
     }
@@ -88,6 +83,8 @@ public class PlacementSystem : MonoBehaviour
 
     private void StopPlacement()
     {
+        soundManager.PlaySound(SoundType.Click);
+
         if(objectState == null)
         {
             return;

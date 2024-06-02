@@ -13,8 +13,9 @@ public class PlacementState : IObjectState
     GridData saleData;
     GridData equipmentData;
     ObjectPlacer objectPlacer;
+    SoundManager soundManager;
 
-    public PlacementState(int iD, Grid grid, PreviewSystem previewSystem, ObjectsDatabaseSO database, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer)
+    public PlacementState(int iD, Grid grid, PreviewSystem previewSystem, ObjectsDatabaseSO database, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager)
     {
         ID = iD;
         this.grid = grid;
@@ -23,6 +24,7 @@ public class PlacementState : IObjectState
         this.saleData = saleData;
         this.equipmentData = equipmentData;
         this.objectPlacer = objectPlacer;
+        this.soundManager = soundManager;
 
         selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
         if(selectedObjectIndex > -1)
@@ -47,10 +49,11 @@ public class PlacementState : IObjectState
         bool placementValidity = CheckPlacementValidity(gridPos, selectedObjectIndex);
         if(placementValidity == false)
         {
+            soundManager.PlaySound(SoundType.wrongPlacement);
             return;
         }
 
-        
+        soundManager.PlaySound(SoundType.Place);
 
         int index = objectPlacer.PlaceObject(database.objectsData[selectedObjectIndex].Prefab, grid.CellToWorld(gridPos));
         

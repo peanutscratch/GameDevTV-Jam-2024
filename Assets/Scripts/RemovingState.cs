@@ -11,13 +11,15 @@ public class RemovingState : IObjectState
     GridData saleData;
     GridData equipmentData;
     ObjectPlacer objectPlacer;
-    public RemovingState(Grid grid, PreviewSystem previewSystem, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer)
+    SoundManager soundManager;
+    public RemovingState(Grid grid, PreviewSystem previewSystem, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager)
     {
         this.grid = grid;
         this.previewSystem = previewSystem;
         this.saleData = saleData;
         this.equipmentData = equipmentData;
         this.objectPlacer = objectPlacer;
+        this.soundManager = soundManager;
         previewSystem.StartShowingRemovePreview();
     }
 
@@ -43,9 +45,11 @@ public class RemovingState : IObjectState
         if(selectedData == null)
         {
             //sound
+            soundManager.PlaySound(SoundType.wrongPlacement);
         }
         else
         {
+            soundManager.PlaySound(SoundType.Remove);
             gameObjectIndex = selectedData.GetRepresentationIndex(gridPos);
             if(gameObjectIndex == -1)
             {
