@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GridData : MonoBehaviour
+public class GridData 
 {
     Dictionary<Vector3Int, PlacementData> placedObjects = new();
 
@@ -47,6 +48,24 @@ public class GridData : MonoBehaviour
             }
         }
         return true;
+    }
+
+    internal int GetRepresentationIndex(Vector3Int gridPos)
+    {
+        if(placedObjects.ContainsKey(gridPos) == false)
+        {
+            return -1;
+        }
+        return placedObjects[gridPos].PlacedObjectIndex;
+    }
+
+    internal void RemoveObjectAt(Vector3Int gridPos)
+    {
+        foreach(var pos in placedObjects[gridPos].occupiedPositions)
+        {
+            placedObjects.Remove(pos);
+            
+        }
     }
 }
 
