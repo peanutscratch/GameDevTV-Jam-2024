@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class HeroBehavior : MonoBehaviour
 {   
     [SerializeField]
+    public GameObject dialogueBox;
+    [SerializeField]
     private static int totalGridArea = 50;
     [SerializeField]
     public PlacementSystem placementSystem;
@@ -37,20 +39,27 @@ public class HeroBehavior : MonoBehaviour
     private static List<ObjectData> purchasedItems = new();
 
     public void OnClick() {
+
+        dialogueBox.SetActive(true);
+
         placementSystem = FindObjectOfType<PlacementSystem>();
         List<ObjectData> itemsForSale = placementSystem.getPlacedObjects();
+        List<string> linesofDialogue = new();
 
         if (checkIfTableIsSparse(itemsForSale)) {
+            linesofDialogue.Add("Not much of a selection, is it?");
             Debug.Log("Not much of a selection, is it?");
             willingToPay -= 25.0F;
         }
 
         if (checkIfTableIsLowQuality(itemsForSale)) {
+            linesofDialogue.Add("I need better gear than this to, you know, save the entire world.");
             Debug.Log("I need better gear than this to, you know, save the entire world.");
             willingToPay -= 25.0F;
         }
 
         if (checkIfItemsAreCheap(itemsForSale)) {
+            linesofDialogue.Add("I guess you're this dungeon's dollar store? How... quaint.");
             Debug.Log("I guess you're this dungeon's dollar store? How... quaint.");
             willingToPay -= 25.0F;
         }
@@ -58,9 +67,11 @@ public class HeroBehavior : MonoBehaviour
         while (willingToPay > 0.0F) {
             ObjectData itemToBuy = computePurchasePriorityAndSelectItem(itemsForSale);
             if (itemToBuy == null) {
+                linesofDialogue.Add("Looks like there's nothing else I can buy!");
                 Debug.Log("Looks like there's nothing else I can buy!");
                 break;
             }
+            linesofDialogue.Add("I would like to buy this " + itemToBuy.ItemInformation.name + " please!");
             Debug.Log("I would like to buy this " + itemToBuy.ItemInformation.name + " please!");
             willingToPay -= itemToBuy.ItemInformation.basePrice;
 
@@ -71,12 +82,14 @@ public class HeroBehavior : MonoBehaviour
         }
 
         if (willingToPay <= 0.0F) {
+            linesofDialogue.Add("I don't have a coin left to spare, thanks!");
             Debug.Log("I don't have a coin left to spare, thanks!");
         }
 
+        linesofDialogue.Add("I think I'm done shopping for now, thanks!");
         Debug.Log("I think I'm done shopping for now, thanks!");
 
-        SceneManager.LoadScene("Dragon Fight Outcome");
+        dialogueBox.GetComponent<NarrativeSystemScript>().lines = linesofDialogue.ToArray();
     }
 
     private ObjectData computePurchasePriorityAndSelectItem(List<ObjectData> itemsForSale) {
@@ -134,6 +147,9 @@ public class HeroBehavior : MonoBehaviour
     // If more than 50% of the items are low-quality, return true
     private bool checkIfTableIsLowQuality(List<ObjectData> itemsForSale) {
         int totalItemsOnTable = itemsForSale.Count;
+        if (totalItemsOnTable == 0) {
+            return true;
+        }
         int lowQualityItemCount = 0;
         foreach (ObjectData item in itemsForSale) {
             if (item.ItemInformation.isEnchanted || item.ItemInformation.isDiscounted || item.ItemInformation.isPremium) {
@@ -149,6 +165,9 @@ public class HeroBehavior : MonoBehaviour
     // If the average price of items on the table is less than $10, return true;
     private bool checkIfItemsAreCheap(List<ObjectData> itemsForSale) {
         int totalItemsOnTable = itemsForSale.Count;
+        if (totalItemsOnTable == 0) {
+            return true;
+        }
         float currentTotalPrice = 0.0F;
         foreach (ObjectData item in itemsForSale) {
             currentTotalPrice += item.ItemInformation.basePrice;
@@ -171,6 +190,8 @@ public class HeroBehavior : MonoBehaviour
             LookingForMagic -= 3;
         }
     }
+
+
 
     public static List<ObjectData> getPurchasedItemsList() {
         return purchasedItems;
