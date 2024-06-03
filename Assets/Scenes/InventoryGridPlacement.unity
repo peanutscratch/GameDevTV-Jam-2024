@@ -220,6 +220,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 1167243798}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
       propertyPath: lines.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -928,7 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 106229795}
   grid: {fileID: 2037672468}
-  database: {fileID: 11400000, guid: 4f67a69b0a382224a8a567be4d227499, type: 2}
+  database: {fileID: 11400000, guid: 8b7fd036cee50694c9307dbb8bca3d67, type: 2}
   gridVisualization: {fileID: 786065693}
   preview: {fileID: 483791122}
   objectPlacer: {fileID: 744320892}
@@ -1661,6 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c609659b6693aea4abaae3ad837b62f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
   dialogueBox: {fileID: 1167243798}
   placementSystem: {fileID: 0}
   willingToPay: 100

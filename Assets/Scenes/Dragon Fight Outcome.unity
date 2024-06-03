@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5775792b2461d40a9dc23cc0774cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
 --- !u!1 &1375387533
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b248bd095a0b040889d3cad37fe9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
   deathDescription: {fileID: 2027789617}
   scorchedSprite: {fileID: 442894575}
   chompSprite: {fileID: 1955175610}
