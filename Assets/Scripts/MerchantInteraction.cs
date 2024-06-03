@@ -20,6 +20,10 @@ public class MerchantInteraction : MonoBehaviour
     public GameStateInfoSO gameState;
     [SerializeField]
     public ItemScriptableObject potionISO;
+    [SerializeField]
+    public GameObject merchantPanels;
+    [SerializeField]
+    public GameObject potionPrefab;
 
     private List<string> diag = new();
     private bool startBuying = false;
@@ -38,6 +42,7 @@ public class MerchantInteraction : MonoBehaviour
             potion.Name = "Health Potion";
             potion.isPromotion = false;
             potion.Size = Vector2Int.one;
+            potion.Prefab = potionPrefab;
             potion.ItemInformation = potionISO;
             shopInventory.objectsData.Add(potion);
         }
@@ -48,6 +53,7 @@ public class MerchantInteraction : MonoBehaviour
             if (!startBuying) {
                 startBuying = true;
                 Debug.Log("Starting buying phase");
+                merchantPanels.SetActive(true);
             }            
         }
     }

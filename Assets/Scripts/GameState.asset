@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f74bcc4aa8c4f94f9b509698e730f0a, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
-  totalCurrencyAvailable: 25
-  currentLoopCount: 2
+  totalCurrencyAvailable: 100
+  currentLoopCount: 3
   isDayTime: 0
   merchantTalking: 1
   heroTalking: 0
   playerTalking: 0
+  currentSelectedItem: {fileID: 11400000, guid: 29c2facc6ba907449acde95a3a2eafdc, type: 2}

@@ -12,6 +12,7 @@ public class GameStateInfoSO : ScriptableObject
     public bool merchantTalking;
     public bool heroTalking;
     public bool playerTalking;
+    public ItemScriptableObject currentSelectedItem;
 
     public void PayForItem(float cost) {
         this.totalCurrencyAvailable -= cost;

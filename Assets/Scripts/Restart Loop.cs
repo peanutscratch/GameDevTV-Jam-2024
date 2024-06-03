@@ -12,6 +12,7 @@ public class RestartLoop : MonoBehaviour
     public void OnClick()
     {
         gameState.currentLoopCount += 1;
-        SceneManager.LoadScene("InventoryGridPlacement");
+        gameState.merchantTalking = true;
+        SceneManager.LoadScene("Merchant Restocking");
     }
 }

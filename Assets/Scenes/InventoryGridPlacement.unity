@@ -936,7 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 106229795}
   grid: {fileID: 2037672468}
-  database: {fileID: 11400000, guid: 4f67a69b0a382224a8a567be4d227499, type: 2}
+  database: {fileID: 11400000, guid: 8b7fd036cee50694c9307dbb8bca3d67, type: 2}
   gridVisualization: {fileID: 786065693}
   preview: {fileID: 483791122}
   objectPlacer: {fileID: 744320892}
