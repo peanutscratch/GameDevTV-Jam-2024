@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlacementState : IObjectState
 {
     private int selectedObjectIndex = -1;
-    int ID;
+    GameObject tile;
+    string Name;
     Grid grid;
     PreviewSystem previewSystem;
     ObjectsDatabaseSO database;
@@ -14,10 +15,12 @@ public class PlacementState : IObjectState
     GridData equipmentData;
     ObjectPlacer objectPlacer;
     SoundManager soundManager;
+    List<ObjectData> placedGameObjectsMetadata;
 
-    public PlacementState(int iD, Grid grid, PreviewSystem previewSystem, ObjectsDatabaseSO database, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager)
+    public PlacementState(GameObject tile, Grid grid, PreviewSystem previewSystem, ObjectsDatabaseSO database, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager, List<ObjectData> placedGameObjectsMetadata)
     {
-        ID = iD;
+        this.tile = tile;
+        this.Name = tile.GetComponent<TableMetadata>().Name;
         this.grid = grid;
         this.previewSystem = previewSystem;
         this.database = database;
@@ -25,8 +28,9 @@ public class PlacementState : IObjectState
         this.equipmentData = equipmentData;
         this.objectPlacer = objectPlacer;
         this.soundManager = soundManager;
+        this.placedGameObjectsMetadata = placedGameObjectsMetadata;
 
-        selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
+        selectedObjectIndex = database.objectsData.FindIndex(data => data.Name == Name);
         if(selectedObjectIndex > -1)
         {
             previewSystem.StartShowingPlacementPreview(database.objectsData[selectedObjectIndex].Prefab, database.objectsData[selectedObjectIndex].Size);
@@ -34,7 +38,7 @@ public class PlacementState : IObjectState
         }
         else
         {
-            throw new System.Exception($"No object with ID {ID}");
+            throw new System.Exception($"No object with Name {Name}");
         }
         
     }
@@ -58,7 +62,8 @@ public class PlacementState : IObjectState
         int index = objectPlacer.PlaceObject(database.objectsData[selectedObjectIndex].Prefab, grid.CellToWorld(gridPos));
         
         GridData selectedData = database.objectsData[selectedObjectIndex].isPromotion == true ? saleData : equipmentData;
-        selectedData.AddObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, index);
+        selectedData.AddObjectAt(gridPos, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].Name, index);
+        placedGameObjectsMetadata.Add(database.objectsData[selectedObjectIndex]);
 
         previewSystem.UpdatePosition(grid.CellToWorld(gridPos), false);
     }

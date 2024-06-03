@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 156797619850319442}
-  lines:
-  - testing out this tutorial
-  - Clicking on screen advanced the dialogue!
+  lines: []
   textSpeed: 0.02
+  textBox: {fileID: 0}
+  gameState: {fileID: 0}

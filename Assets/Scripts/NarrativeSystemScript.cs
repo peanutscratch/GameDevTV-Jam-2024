@@ -73,6 +73,10 @@ public class NarrativeSystemScript : MonoBehaviour
             // Swap to endgame
             else if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("Merchant Restocking") && textBox.name.Equals("MerchantDialogue")) {
                 gameState.merchantTalking = false;
+            } else if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("Hero_animations") && gameState.currentLoopCount == 1) {
+                SceneManager.LoadScene("Dragon Fight Outcome");
+            } else if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("Hero_animations") && gameState.currentLoopCount > 1) {
+                SceneManager.LoadScene("InventoryGridPlacement");
             }
             textBox.SetActive(false);
        }

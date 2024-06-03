@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    public GameStateInfoSO gameState;
+
     public void PlayGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        gameState.currentLoopCount = 1;
+        gameState.totalCurrencyAvailable = 500;
+        SceneManager.LoadScene("Hero_animations");
     }
 
     public void QuitGame() {

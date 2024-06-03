@@ -12,7 +12,7 @@ public class HeroBehavior : MonoBehaviour
     [SerializeField]
     private static int totalGridArea = 50;
     [SerializeField]
-    public PlacementSystem placementSystem;
+    public ObjectsDatabaseSO inventoryDB;
 
     [SerializeField]
     public float willingToPay = 100.0F;
@@ -40,7 +40,7 @@ public class HeroBehavior : MonoBehaviour
 
     public void OnClick() {
 
-        placementSystem = FindObjectOfType<PlacementSystem>();
+        PlacementSystem placementSystem = FindObjectOfType<PlacementSystem>();
         List<ObjectData> itemsForSale = placementSystem.getPlacedObjects();
         List<string> linesofDialogue = new();
 
@@ -73,6 +73,8 @@ public class HeroBehavior : MonoBehaviour
             Debug.Log("I would like to buy this " + itemToBuy.ItemInformation.name + " please!");
             willingToPay -= itemToBuy.ItemInformation.basePrice;
             gameState.SellItem(itemToBuy.ItemInformation.basePrice);
+            // Remove from store inventory
+            inventoryDB.objectsData.Remove(itemToBuy);
 
             reduceBuyingFactor(itemToBuy.ItemInformation.category.ToString());
             // Add logic to remove from grid as well
@@ -96,6 +98,7 @@ public class HeroBehavior : MonoBehaviour
         float currentMostValued = float.MinValue;
         ObjectData currentMostValuedObject = null;
         foreach (ObjectData item in itemsForSale) {
+            Debug.Log("Entering computation loop for: " + item.Name);
             if (item.ItemInformation.basePrice > willingToPay) {
                 continue;
             }
