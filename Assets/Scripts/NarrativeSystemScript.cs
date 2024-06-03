@@ -10,6 +10,10 @@ public class NarrativeSystemScript : MonoBehaviour
     //public string[] character;
     public string[] lines;
     public float textSpeed;
+    [SerializeField]
+    public GameObject textBox;
+    [SerializeField]
+    public GameStateInfoSO gameState;
 
     private int index;
 
@@ -66,9 +70,11 @@ public class NarrativeSystemScript : MonoBehaviour
             if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("InventoryGridPlacement")) {
                 SceneManager.LoadScene("Dragon Fight Outcome");
             }
+            // Swap to endgame
+            else if (lines.Length > 0 && SceneManager.GetActiveScene().name.Equals("Merchant Restocking") && textBox.name.Equals("MerchantDialogue")) {
+                gameState.merchantTalking = false;
+            }
+            textBox.SetActive(false);
        }
-        //{
-         //   gameObject.SetActive(false);
-       // }
     }
 }

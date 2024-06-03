@@ -10,6 +10,8 @@ public class DragonBattleOutcome : MonoBehaviour
     float totalMagic = 0.0F;
 
     [SerializeField]
+    public GameStateInfoSO gameState;
+    [SerializeField]
     public TextMeshProUGUI deathDescription;
     [SerializeField]
     GameObject scorchedSprite;
@@ -28,6 +30,7 @@ public class DragonBattleOutcome : MonoBehaviour
         chompSprite.SetActive(false);
         yamchaDeathSprite.SetActive(false);
         victorySprite.SetActive(false);
+        gameState.isDayTime = false;
 
         List<ObjectData> purchasedItems = HeroBehavior.getPurchasedItemsList();
         Debug.Log("Current list of purchased items is " + purchasedItems.Count + " long");

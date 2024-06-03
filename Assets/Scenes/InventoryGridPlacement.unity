@@ -220,6 +220,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 1167243798}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 411194cb28df49e468cf095d9c0e6653, type: 2}
+    - target: {fileID: 7469661819778191562, guid: 445f57dfe37451644b2de067587a97ff, type: 3}
       propertyPath: lines.Array.size
       value: 0
       objectReference: {fileID: 0}
