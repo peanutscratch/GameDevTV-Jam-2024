@@ -19,7 +19,7 @@ public class NextPage : MonoBehaviour
     public int offset = 0;
 
     public void moveToSellingScene() {
-        SceneManager.LoadScene("InventoryGridPlacement");
+        SceneManager.LoadScene("Hero_animations");
     }
 
     public void nextPageOfMerchantWares() {

@@ -21,8 +21,6 @@ public class PlacementSystem : MonoBehaviour
 
     public GridData saleData, equipmentData;
 
-
-    private List<GameObject> placedGameObjects = new();
     private List<ObjectData> placedGameObjectsMetadata = new();
 
     [SerializeField]
@@ -46,11 +44,11 @@ public class PlacementSystem : MonoBehaviour
 
     }
 
-    public void StartPlacement(int ID)
+    public void StartPlacement(GameObject tile)
     {
         StopPlacement();
         gridVisualization.SetActive(true);
-        objectState = new PlacementState(ID, grid, preview, database, saleData, equipmentData,objectPlacer, soundManager);
+        objectState = new PlacementState(tile, grid, preview, database, saleData, equipmentData,objectPlacer, soundManager, placedGameObjectsMetadata);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
 
@@ -60,7 +58,7 @@ public class PlacementSystem : MonoBehaviour
     {
         StopPlacement();
         gridVisualization.SetActive(true);
-        objectState = new RemovingState(grid, preview, saleData, equipmentData, objectPlacer, soundManager);
+        objectState = new RemovingState(grid, preview, saleData, equipmentData, objectPlacer, soundManager, placedGameObjectsMetadata);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
     }

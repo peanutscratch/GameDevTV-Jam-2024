@@ -12,7 +12,8 @@ public class RemovingState : IObjectState
     GridData equipmentData;
     ObjectPlacer objectPlacer;
     SoundManager soundManager;
-    public RemovingState(Grid grid, PreviewSystem previewSystem, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager)
+    List<ObjectData> placedGameObjectsMetadata;
+    public RemovingState(Grid grid, PreviewSystem previewSystem, GridData saleData, GridData equipmentData, ObjectPlacer objectPlacer, SoundManager soundManager, List<ObjectData> placedGameObjectsMetadata)
     {
         this.grid = grid;
         this.previewSystem = previewSystem;
@@ -21,6 +22,7 @@ public class RemovingState : IObjectState
         this.objectPlacer = objectPlacer;
         this.soundManager = soundManager;
         previewSystem.StartShowingRemovePreview();
+        this.placedGameObjectsMetadata = placedGameObjectsMetadata;
     }
 
     public void EndState()

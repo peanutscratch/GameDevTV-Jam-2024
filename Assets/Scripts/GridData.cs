@@ -9,10 +9,10 @@ public class GridData
 {
     Dictionary<Vector3Int, PlacementData> placedObjects = new();
 
-    public void AddObjectAt(Vector3Int gridPos, Vector2Int objectSize, int ID, int placedObjectIndex)
+    public void AddObjectAt(Vector3Int gridPos, Vector2Int objectSize, string Name, int placedObjectIndex)
     {
         List<Vector3Int> positionToOccupy = CalculatePositions(gridPos, objectSize);
-        PlacementData data = new PlacementData(positionToOccupy, ID, placedObjectIndex);
+        PlacementData data = new PlacementData(positionToOccupy, Name, placedObjectIndex);
 
         foreach(var pos in positionToOccupy)
         {
@@ -72,14 +72,14 @@ public class GridData
 public class PlacementData
 {
     public List<Vector3Int> occupiedPositions;
-    public int ID {get; private set; }
+    public string Name {get; private set; }
     public int PlacedObjectIndex {get; private set;}
 
 
-    public PlacementData(List<Vector3Int> occupiedPositions, int iD, int placedObjectIndex)
+    public PlacementData(List<Vector3Int> occupiedPositions, string Name, int placedObjectIndex)
     {
         this.occupiedPositions = occupiedPositions;
-        ID = iD;
+        this.Name = Name;
         PlacedObjectIndex = placedObjectIndex;
     }
 
